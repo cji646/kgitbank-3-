@@ -1,0 +1,18 @@
+# 1. Apache 웹 서버 설치
+sudo dnf install -y httpd
+
+# 2. 웹 서버 실행 및 부팅 시 자동 실행 설정
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+# 3. 방화벽에서 HTTP 포트 열기
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --reload
+
+# 1. vi로 파일 열기
+
+그 후
+sudo vi /var/www/html/index.html
+sudo/var/www/html/overpass.php
+
+설정 후 PC나 스마트폰 브라우저 주소창에 http://[CentOS_서버_IP주소]를 입력하고 접속하시면 작성하신 지도가 화면에 나타남
